@@ -1,0 +1,9 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_LAZY_PINKY_18_LEFT
+	def_bool $(shields_list_contains,lazy_pinky_18_left)
+
+config SHIELD_LAZY_PINKY_18_RIGHT
+	def_bool $(shields_list_contains,lazy_pinky_18_right)
+	
