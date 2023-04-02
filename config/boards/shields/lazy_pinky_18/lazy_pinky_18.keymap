@@ -191,7 +191,7 @@
 		bindings = <
 		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
 		&kp DOUBLE_QUOTES	 	&none		          &none		          &none                   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
-			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
+			 	 		 		                          &trans	          &enter_bt_lay                &kp LC(LS(LALT))  &trans
 		>;
 		};
 
