@@ -17,3 +17,5 @@ include:
     shield: lazy_pinky_18_left
   - board: seeeduino_xiao_ble
     shield: lazy_pinky_18_right
+  - board: seeeduino_xiao_ble 
+    shield: settings_reset
