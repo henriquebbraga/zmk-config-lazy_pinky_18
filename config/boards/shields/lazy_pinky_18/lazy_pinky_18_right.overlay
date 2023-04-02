@@ -7,7 +7,7 @@
 #include "lazy_pinky_18.dtsi"
 
 &default_transform {
-	col-offset = <15>;
+	col-offset = <9>;
 };
 
 &pwm0 {
