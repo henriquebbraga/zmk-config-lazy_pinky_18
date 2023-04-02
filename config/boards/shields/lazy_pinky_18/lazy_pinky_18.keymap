@@ -181,8 +181,8 @@
                 
     alpha1 {
 		bindings = <
-		 		            &hl_l SYMB R 	  &bt BT_NXT 	      &bt BT_CLR		  &bt BT_CLR 	  &hl_r NUM E     &hl_r SYMB I	  
-		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
+		 		            &hl_l SYMB R 	  &bt BT_NXT 	      &bt BT_CLR		  &bl BL_ON 	  &bl BL_OFF     &hl_r SYMB I	  
+		&hl_l SYMB2 A	  &hm_l LCTRL L	  &bl BL_ON	      &bl BL_OFF 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
 			 	 		 		                    &thu_l MKEYS BKSP   &alpha2macro        &alpha3macro	    &thu_r ASP SPC	 	
 		>;
 		};
