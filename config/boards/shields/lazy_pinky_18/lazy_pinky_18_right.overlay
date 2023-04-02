@@ -10,8 +10,3 @@
 	col-offset = <9>;
 };
 
-&pwm0 {
-    status = "okay";
-    ch0-pin = <26>; /* LED builtin BLUE */
-};
-

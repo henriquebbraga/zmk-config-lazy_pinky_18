@@ -5,8 +5,3 @@
  */
 
 #include "lazy_pinky_18.dtsi"
-&pwm0 {
-    status = "okay";
-    ch0-pin = <26>; /* LED builtin BLUE */
-};
-
