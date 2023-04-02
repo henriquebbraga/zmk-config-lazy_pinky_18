@@ -46,7 +46,7 @@
     compatible = "gpio-leds";
     label = "Backlight LEDs";
     gpio_led_0 {
-        gpios = <&xiao_d 11 GPIO_ACTIVE_LOW>;
+        gpios = <&gpio 26 GPIO_ACTIVE_LOW>;
         label = "Backlight LED 0";
     };
 };
