@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include " lazy_pinky_18.dtsi"
+#include "lazy_pinky_18.dtsi"
 
 &default_transform {
 	col-offset = <15>;
