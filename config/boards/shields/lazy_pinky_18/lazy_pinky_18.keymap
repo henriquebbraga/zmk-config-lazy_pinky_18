@@ -61,6 +61,7 @@
 #define AL2CAPS   10
 #define MKEYS     11
 #define FKEYS     12
+#define SKEYS     13
 
 / { 
 
@@ -191,24 +192,24 @@
     alpha2 {
 		bindings = <
 		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
-		&kp DOUBLE_QUOTES	 	&none		          &none		          &none                   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
+		&kp DOUBLE_QUOTES	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
 			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
 		>;
 		};
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL    	      &kp BACKSLASH		&kp SLASH 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	            &none			      &none		&kp SEMICOLON 
-			 	 		 		      &trans	&to NUM   &kp LC(LS(LALT))    &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL    &kp BACKSLASH		&kp SLASH 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	     &none			      &kp ESC		  &kp SEMICOLON 
+			 	 		 		      &trans	&to NUM   &sl SKEYS    &trans
 		>;
 		};
 		
 		num {
 		bindings = <
-		        &kp N2 	    &kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &kp N9
-		&kp N1	&none 	    &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	&kp N0
-		                    &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
+		        &hl_r FKEYS N2 	&kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &hl_r FKEYS N9
+		&kp N1	&none 	        &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
+		                        &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
 		>;
 		};
 
@@ -222,9 +223,9 @@
 
 		symb2 {
 		bindings = <
-		                    &kp LS(GRAVE) 	&kp LS(MINUS)	    &none 	&kp LS(EQUAL) 	        &kp LS(BACKSLASH)		&kp LS(SLASH)
-		&kp SINGLE_QUOTE	  &kp GRAVE 	    &kp MINUS		      &none		&kp RIGHT_PARENTHESIS	  &kp RIGHT_BRACE	    &kp RIGHT_BRACKET   &kp LS(SEMICOLON)
-		                                    &hl_l MKEYS BKSP  &none   &to AL1 	              &hl_r ASP SPC  	 
+		                    &kp LS(GRAVE) 	&kp LS(MINUS)	    &none 	&kp LS(EQUAL) 	 &kp LS(BACKSLASH)		&kp LS(SLASH)
+		&kp SINGLE_QUOTE	  &kp GRAVE 	    &kp MINUS		      &none		&none	           &none	              &none           &kp LS(SEMICOLON)
+		                                    &hl_l MKEYS BKSP  &none   &to AL1 	       &hl_r ASP SPC  	 
 		>;
 		};
 
@@ -246,9 +247,9 @@
 
 		alphaspecials {
 		bindings = <
-				 	      &kp LG(Z) 	&none       	&td_cpy_pst	    &kp LC(LEFT) 	&kp LS(ENTER) 		&kp LC(RIGHT) 			
-		&sk LALT    &sk LCTRL   &sk LGUI 	    &sk LSHIFT		        &none  		    &none 	          &none 	          &none 
-		 			 		 			        &caps_word 		&key_repeat           &none         &none		
+				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LC(LEFT) 	&kp LS(ENTER) 		&kp LC(RIGHT) 			
+		&kp LG(ENTER)   &kp LG(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &none 
+		 			 		 			    &kt LGUI 		&key_repeat     &none         &none		
 		>;
 		};
 
@@ -278,12 +279,19 @@
 
 		fkeys {
 		bindings = <
-				    &kp F1 	&kp F2	  &kp F3 		      &kp F7    &kp F8		&kp F9	
-		&none	  &kp F4 	&kp F5		&kp F6		      &kp F10		&kp F11	  &kp F12   	&none
+				    &kp F2 	&kp F3	  &kp F4 		      &kp F7    &kp F8		&kp F9	
+		&kp F1	&none 	&none		  &kp F5		      &kp F6		&kp F11	  &kp F12   	&kp F10
 							      &none 		&enter_bt_lay 	&to AL1 	&none  	 
 		>;
 		};
 
+		stickies {
+		bindings = <
+				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_word      &sl NUM		&sl SYMB
+		&sk LALT	  &none 	    &none		    &none		      &none		        &sl FKEYS	&none   	&SYMB2
+							              &none 		  &to NUM 	    &LC(LG(LALT)) 	&none  	 
+		>;
+		};
 	};
 };
 
