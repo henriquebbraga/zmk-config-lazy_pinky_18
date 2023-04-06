@@ -160,7 +160,7 @@
       	label = "BT backlight ON";
       	#binding-cells = <0>;
       	bindings =    < &to BT >
-                    , < &bl BL_ON >
+                    , < &bl BL_OFF >
                     ;
       };
       leave_bt_lay: behavior_macro_4 {
@@ -168,7 +168,7 @@
       	label = "BT backlight OFF";
       	#binding-cells = <0>;
       	bindings =    < &to AL1 >
-                    , < &bl BL_OFF >
+                    , < &bl BL_ON >
                     ;
       };
 
