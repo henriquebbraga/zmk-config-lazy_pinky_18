@@ -288,7 +288,7 @@
 		stickies {
 		bindings = <
 				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_word      &sl NUM		&sl SYMB
-		&sk LALT	  &none 	    &none		    &none		      &none		        &sl FKEYS	&none   	&SYMB2
+		&sk LALT	  &none 	    &none		    &none		      &none		        &sl FKEYS	&none   	&sl SYMB2
 							              &none 		  &to NUM 	    &LC(LG(LALT)) 	&none  	 
 		>;
 		};
