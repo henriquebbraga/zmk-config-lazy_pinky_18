@@ -25,6 +25,16 @@
 
 #define SCROLL_UP_FAST SCROLL_VERT(-40)
 
+#define SL_KP(x) sl_ .. x .. and_to0
+#define SL_N_TO0(x) \
+      sl_ .. x .. and_to0: behavior_macro_lay_ .. x .. {\
+        compatible = "zmk,behavior-macro";\
+        label = "MACRO_ .. x ..";\
+        #binding-cells = <0>;\
+      	bindings =    < &to AL1 >\
+                    , < &sl x >\
+                    ;\
+      };\
 
 &mt {
     tapping-term-ms = <201>;
@@ -181,14 +191,11 @@
                     ;
       };
 
-      sl_and_to0: behavior_macro_6 {
-        compatible = "zmk,behavior-macro";
-        label = "MACRO5";
-        #binding-cells = <1>;
-      	bindings =    < &to AL1 >
-                    , < &sl >
-                    ;
-      };
+      SL_N_TO0(NUM)
+      SL_N_TO0(SYMB)
+      SL_N_TO0(SYMB2)
+      SL_N_TO0(FKEYS)
+
 
     };
 
@@ -306,8 +313,8 @@
 
 		stickies {
 		bindings = <
-				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_and_to_0   &sl_and_to0 NUM		&sl_and_to0 SYMB
-		&sk LALT	  &none 	    &none		    &none		      &none		         &sl_and_to0 FKEYS	&none   	        &sl_and_to0 SYMB2
+				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_and_to_0   &SL_KP(NUM)		&SL_KP(SYMB)
+		&sk LALT	  &none 	    &none		    &none		      &none		         &SL_KP(FKEYS)	&none   	        &SL_KP(SYMB2)
 							              &none 		  &to NUM 	    &to AL1 	       &none  	 
 		>;
 		};
