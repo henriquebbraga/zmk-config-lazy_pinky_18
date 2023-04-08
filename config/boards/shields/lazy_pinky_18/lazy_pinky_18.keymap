@@ -172,6 +172,12 @@
                     , < &bl BL_ON >
                     ;
       };
+      sticky_macro: behavior_macro_5 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO5";
+        #binding-cells = <0>;
+        bindings = < &sl SKEYS >;
+      };
 
     };
 
@@ -199,9 +205,9 @@
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL    &kp BACKSLASH		&kp SLASH 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	     &none			      &kp ESC		  &kp SEMICOLON 
-			 	 		 		      &trans	&to NUM   &sl SKEYS    &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL       &kp BACKSLASH		&kp SLASH 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	        &none			      &kp ESC		  &kp SEMICOLON 
+			 	 		 		      &trans	&to NUM   &sticky_macro   &trans
 		>;
 		};
 		
@@ -248,7 +254,7 @@
 		alphaspecials {
 		bindings = <
 				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LC(LEFT) 	&kp LS(ENTER) 		&kp LC(RIGHT) 			
-		&kp LG(ENTER)   &kp LG(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &none 
+		&kp LG(ENTER)   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &none 
 		 			 		 			    &kt LGUI 		&key_repeat     &none         &none		
 		>;
 		};
