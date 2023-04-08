@@ -172,11 +172,22 @@
                     , < &bl BL_ON >
                     ;
       };
-      sticky_macro: behavior_macro_5 {
+      caps_and_to_0: behavior_macro_5 {
         compatible = "zmk,behavior-macro";
         label = "MACRO5";
         #binding-cells = <0>;
-        bindings = < &sl SKEYS >;
+      	bindings =    < &to AL1 >
+                    , < &caps_word >
+                    ;
+      };
+
+      sl_and_to0: behavior_macro_6 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO5";
+        #binding-cells = <1>;
+      	bindings =    < &to AL1 >
+                    , < &sl >
+                    ;
       };
 
     };
@@ -205,9 +216,9 @@
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL       &kp BACKSLASH		&kp SLASH 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	        &none			      &kp ESC		  &kp SEMICOLON 
-			 	 		 		      &trans	&to NUM   &sticky_macro   &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL   &kp BACKSLASH		&kp SLASH 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	    &none			      &kp ESC		  &kp SEMICOLON 
+			 	 		 		      &trans	&to NUM   &to SKEYS   &trans
 		>;
 		};
 		
@@ -241,6 +252,8 @@
 		&none	&none		    &none 	  &kp LC(UP)	&kp LS(LC(TAB))  	  &mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
 		 			 		 				&trans 		&mo MOU2    &to AL1             &hl_r ASP SPC		
 		>;
+
+    
 		};
 
 		mouse2 {
@@ -293,9 +306,9 @@
 
 		stickies {
 		bindings = <
-				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_word      &sl NUM		&sl SYMB
-		&sk LALT	  &none 	    &none		    &none		      &none		        &sl FKEYS	&none   	&sl SYMB2
-							              &none 		  &to NUM 	    &kp LC(LG(LALT)) 	&none  	 
+				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_and_to_0   &sl_and_to0 NUM		&sl_and_to0 SYMB
+		&sk LALT	  &none 	    &none		    &none		      &none		         &sl_and_to0 FKEYS	&none   	        &sl_and_to0 SYMB2
+							              &none 		  &to NUM 	    &to AL1 	       &none  	 
 		>;
 		};
 	};
