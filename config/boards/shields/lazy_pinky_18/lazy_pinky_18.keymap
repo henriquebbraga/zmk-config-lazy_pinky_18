@@ -27,14 +27,14 @@
 
 #define SL_KP(x) sl_ .. x .. and_to0
 #define SL_N_TO0(x) \
-      sl_ .. x .. and_to0: behavior_macro_lay_ .. x .. {\
+      sl_ .. x .. and_to0: behavior_macro_lay_ .. x {\
         compatible = "zmk,behavior-macro";\
         label = "MACRO_ .. x ..";\
         #binding-cells = <0>;\
       	bindings =    < &to AL1 >\
                     , < &sl x >\
                     ;\
-      };\
+      };
 
 &mt {
     tapping-term-ms = <201>;
