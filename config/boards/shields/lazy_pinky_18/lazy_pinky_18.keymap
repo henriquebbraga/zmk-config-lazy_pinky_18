@@ -11,6 +11,22 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/* Layers */
+#define AL1       0
+#define AL2       1
+#define AL3       2
+#define NUM       3
+#define SYMB      4
+#define SYMB2     5
+#define MOU1      6
+#define MOU2      7
+#define ASP       8
+#define BT        9
+#define AL2CAPS   10
+#define MKEYS     11
+#define FKEYS     12
+#define LHMOU     13
+
 #define M_MOVE_SPEED 1600
 #define MOVE_UP_H MOVE_VERT(-M_MOVE_SPEED)
 #define MOVE_DOWN_H MOVE_VERT(M_MOVE_SPEED)
@@ -22,8 +38,6 @@
 #define SCROLL_DOWN_H SCROLL_VERT(M_SCROLL_SPEED)
 #define SCROLL_LEFT_H SCROLL_HOR(-M_SCROLL_SPEED)
 #define SCROLL_RIGHT_H SCROLL_HOR(M_SCROLL_SPEED)
-
-#define SCROLL_UP_FAST SCROLL_VERT(-40)
 
 &mt {
     tapping-term-ms = <201>;
@@ -46,21 +60,6 @@
   acceleration-exponent = <0>;
 };
 
-/* Layers */
-#define AL1       0
-#define AL2       1
-#define AL3       2
-#define NUM       3
-#define SYMB      4
-#define SYMB2     5
-#define MOU1      6
-#define MOU2      7
-#define ASP       8
-#define BT        9
-#define AL2CAPS   10
-#define MKEYS     11
-#define FKEYS     12
-#define SKEYS     13
 
 / { 
 
@@ -209,7 +208,7 @@
 		bindings = <
 		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL   &kp BACKSLASH		&kp SLASH 		
 		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	    &none			      &kp ESC		  &kp SEMICOLON 
-			 	 		 		      &trans	&to NUM   &to SKEYS   &trans
+			 	 		 		      &trans	&to NUM   &to LHMOU   &trans
 		>;
 		};
 		
@@ -246,7 +245,6 @@
 
     
 		};
-
 		mouse2 {
 		bindings = <
 				 	          &kp LG(A)   &td_find_opn_lst	  &td_new_cls_tab	    &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
@@ -295,11 +293,11 @@
 		>;
 		};
 
-		stickies {
+		lefthand_mouse_sup {
 		bindings = <
-				        &sk LCTRL 	&sk LGUI 	  &sk LSHIFT 		&caps_and_to_0   &sl NUM		&sl SYMB
-		&sk LALT	  &none 	    &none		    &none		      &none		         &sl FKEYS	&none   	        &sl SYMB2
-							              &none 		  &to NUM 	    &to AL1 	       &none  	 
+				        &kp LCTRL 	&kp LGUI 	    &kp LSHIFT 		  &caps_and_to_0   &none		&none
+		&kp LALT	  &mkp MB3 	  &td_cpy_pst		&kp LS(UP)		  &none		         &none    &none   &none
+							              &none 		    &kp TAB 	      &to AL1 	       &none  	 
 		>;
 		};
 	};
