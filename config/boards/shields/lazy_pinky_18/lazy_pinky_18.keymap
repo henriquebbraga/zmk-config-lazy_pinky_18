@@ -39,7 +39,7 @@
 #define SCROLL_LEFT_H SCROLL_HOR(-M_SCROLL_SPEED)
 #define SCROLL_RIGHT_H SCROLL_HOR(M_SCROLL_SPEED)
 
-#define SCROLL_UP_FAST SCROLL_HOR(-80)
+#define SCROLL_UP_FAST SCROLL_HOR(-60)
 
 &mt {
     tapping-term-ms = <201>;
@@ -257,7 +257,7 @@
 
 		alphaspecials {
 		bindings = <
-				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LC(LEFT) 	&kp LS(ENTER) 		&kp LC(RIGHT) 			
+				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	&kp LS(ENTER) 		&kp LG(RIGHT) 			
 		&kp LG(ENTER)   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &none 
 		 			 		 			    &kt LGUI 		&key_repeat     &none         &none		
 		>;
@@ -298,7 +298,7 @@
 		lefthand_mouse_sup {
 		bindings = <
 				        &kp LCTRL 	&kp LGUI 	    &kp LSHIFT 		  &caps_and_to_0   &none		&none
-		&kp LALT	  &mkp MB3 	  &td_cpy_pst		&kp LS(UP)		  &none		         &none    &none   &none
+		&kp LALT	  &mkp MB3 	  &td_cpy_pst		&kp LC(UP)		  &none		         &none    &none   &none
 							              &none 		    &kp TAB 	      &to AL1 	       &none  	 
 		>;
 		};
