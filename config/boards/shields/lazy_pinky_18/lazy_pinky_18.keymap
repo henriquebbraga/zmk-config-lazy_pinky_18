@@ -39,7 +39,7 @@
 #define SCROLL_LEFT_H SCROLL_HOR(-M_SCROLL_SPEED)
 #define SCROLL_RIGHT_H SCROLL_HOR(M_SCROLL_SPEED)
 
-#define SCROLL_UP_FAST SCROLL_HOR(-60)
+#define SCROLL_UP_FAST SCROLL_HOR(-50)
 
 &mt {
     tapping-term-ms = <201>;
