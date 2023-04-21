@@ -250,7 +250,7 @@
 		mouse2 {
 		bindings = <
 				 	          &kp LG(A)   &td_find_opn_lst	  &td_new_cls_tab	    &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
-		&kp LG(LS(N4))	&none		    &none 	            &none		              &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
+		&kp LG(LS(N4))	&to LHMOU   &none 	            &none		              &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
 		 			 		 				          &none 		          &none                 &to AL1              &none	
 		>;
 		};
@@ -297,9 +297,9 @@
 
 		lefthand_mouse_sup {
 		bindings = <
-				        &kp LCTRL 	&kp LGUI 	    &kp LSHIFT 		  &caps_and_to_0   &none		&none
-		&kp LALT	  &mkp MB3 	  &td_cpy_pst		&kp LC(UP)		  &none		         &none    &none   &none
-							              &none 		    &kp TAB 	      &to AL1 	       &none  	 
+				                &kp LG(TAB) 	&kp LGUI 	      &kp LSHIFT 		  &caps_and_to_0   &none		&none
+		&kp LS(LC(TAB))  	  &kp LC(TAB) 	&td_cpy_pst		  &kp ENTER		    &none		         &none    &none   &none
+							          &to MOU1 		  &none 	        &to AL1 	      &none  	 
 		>;
 		};
 	};
