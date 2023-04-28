@@ -36,8 +36,8 @@
 #define M_SCROLL_SPEED 11
 #define SCROLL_UP_H SCROLL_VERT(-M_SCROLL_SPEED)
 #define SCROLL_DOWN_H SCROLL_VERT(M_SCROLL_SPEED)
-#define SCROLL_LEFT_H SCROLL_HOR(-M_SCROLL_SPEED)
-#define SCROLL_RIGHT_H SCROLL_HOR(M_SCROLL_SPEED)
+#define SCROLL_LEFT_H SCROLL_HOR(M_SCROLL_SPEED)
+#define SCROLL_RIGHT_H SCROLL_HOR(-M_SCROLL_SPEED)
 
 #define SCROLL_UP_FAST SCROLL_VERT(-80)
 
@@ -208,9 +208,9 @@
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL   &kp BACKSLASH		&kp SLASH 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&none 	    &none			      &kp ESC		  &kp SEMICOLON 
-			 	 		 		      &trans	&to NUM   &to LHMOU   &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(BACKSLASH)		  &kp SLASH 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LS(EQUAL) &kp LS(SEMICOLON)	    &kp LS(SLASH)		  &kp SEMICOLON 
+			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
 		>;
 		};
 		
@@ -232,9 +232,9 @@
 
 		symb2 {
 		bindings = <
-		                    &kp LS(GRAVE) 	&kp LS(MINUS)	    &none 	&kp LS(EQUAL) 	 &kp LS(BACKSLASH)		&kp LS(SLASH)
-		&kp SINGLE_QUOTE	  &kp GRAVE 	    &kp MINUS		      &none		&none	           &none	              &none           &kp LS(SEMICOLON)
-		                                    &hl_l MKEYS BKSP  &none   &to AL1 	       &hl_r ASP SPC  	 
+		                    &kp LS(GRAVE) 	&kp LS(MINUS)	    &none 	&kp GRAVE 	 &kp BACKSLASH		&kp MINUS
+		&kp SINGLE_QUOTE	  &none 	        &none		          &none		&none	       &none	          &none     &none
+		                                    &hl_l MKEYS BKSP  &none   &to AL1 	   &hl_r ASP SPC  	 
 		>;
 		};
 
@@ -250,16 +250,16 @@
 		mouse2 {
 		bindings = <
 				 	          &kp LG(A)   &td_find_opn_lst	  &td_new_cls_tab	    &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
-		&kp LG(LS(N4))	&to LHMOU   &none 	            &none		              &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
-		 			 		 				          &none 		          &none                 &to AL1              &none	
+		&kp LG(LS(N4))	&to LHMOU   &none 	            &none		            &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
+		 			 		 				          &none 		          &none               &to AL1              &none	
 		>;
 		};
 
 		alphaspecials {
 		bindings = <
 				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	&kp LS(ENTER) 		&kp LG(RIGHT) 			
-		&kp LG(ENTER)   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &none 
-		 			 		 			    &kt LGUI 		&key_repeat     &none         &none		
+		&kp LG(ENTER)   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &kp LC(LS(LEFT_BRACKET)) 
+		 			 		 			    &kt LGUI 		&kp LC(LS(RIGHT_BRACKET))       &none         &none		
 		>;
 		};
 
@@ -297,7 +297,7 @@
 
 		lefthand_mouse_sup {
 		bindings = <
-				                &kp LG(TAB) 	&kp LGUI 	      &kp LSHIFT 		  &caps_and_to_0   &none		&none
+				                &kp LG(TAB) 	&mkp  MB3 	    &kp LSHIFT 		  &caps_and_to_0   &none		&none
 		&kp LS(LC(TAB))  	  &kp LC(TAB) 	&td_cpy_pst		  &kp ENTER		    &none		         &none    &none   &none
 							          &to MOU1 		  &none 	        &to AL1 	      &none  	 
 		>;
