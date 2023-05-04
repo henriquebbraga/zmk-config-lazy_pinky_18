@@ -201,15 +201,15 @@
     alpha2 {
 		bindings = <
 		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
-		&kp DOUBLE_QUOTES	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
+		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
 			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
 		>;
 		};
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(BACKSLASH)		  &kp SLASH 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LS(EQUAL) &kp LS(SEMICOLON)	    &kp LS(SLASH)		  &kp SEMICOLON 
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(BACKSLASH)		&kp LS(SLASH) 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LS(EQUAL) &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
 			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
 		>;
 		};
@@ -217,24 +217,24 @@
 		num {
 		bindings = <
 		        &hl_r FKEYS N2 	&kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &hl_r FKEYS N9
-		&kp N1	&none 	        &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
+		&kp N1	&kp GRAVE 	    &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
 		                        &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
 		>;
 		};
 
 		symb {
 		bindings = <
-		            &kp LS(N2) 	&kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &kp LS(N9)
-		&kp LS(N1)	&none 	    &none		            &kp LS(N5)		&kp LS(N6)	  &none	          &none   	  &kp LS(N0)
-		                        &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
+		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &kp LS(N9)
+		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &none   	  &kp LS(N0)
+		                            &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
 		>;
 		};
 
 		symb2 {
 		bindings = <
-		                    &kp LS(GRAVE) 	&kp LS(MINUS)	    &none 	&kp GRAVE 	 &kp BACKSLASH		&kp MINUS
-		&kp SINGLE_QUOTE	  &none 	        &none		          &none		&none	       &none	          &none     &none
-		                                    &hl_l MKEYS BKSP  &none   &to AL1 	   &hl_r ASP SPC  	 
+		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none 	 &none		&none
+		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&none	   &none	  &none     &none
+		                                  &none             &none                       &none 	 &none  	 
 		>;
 		};
 
@@ -257,9 +257,9 @@
 
 		alphaspecials {
 		bindings = <
-				 	          &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	&kp LS(ENTER) 		&kp LG(RIGHT) 			
-		&kp LG(ENTER)   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &none  		    &none 	          &none 	          &kp LC(LS(LEFT_BRACKET)) 
-		 			 		 			    &kt LGUI 		&kp LC(LS(RIGHT_BRACKET))       &none         &none		
+				 	  &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	      &kp LS(ENTER) 		&kp LG(RIGHT) 			
+		&none   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &kp LS(LG(LEFT)) 		&none 	          &kp LS(LG(RIGHT)) 	&none
+		 			 		 			        &kt LGUI 		    &key_repeat     &none               &none		
 		>;
 		};
 
