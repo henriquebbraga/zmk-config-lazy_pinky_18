@@ -208,8 +208,8 @@
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(BACKSLASH)		&kp LS(SLASH) 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LS(EQUAL) &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(EQUAL)		&kp LS(SLASH) 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)     &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
 			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
 		>;
 		};
@@ -225,7 +225,7 @@
 		symb {
 		bindings = <
 		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &kp LS(N9)
-		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &none   	  &kp LS(N0)
+		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &kp LS(N0)
 		                            &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
 		>;
 		};
