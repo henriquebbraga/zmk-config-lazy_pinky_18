@@ -15,17 +15,18 @@
 #define AL1       0
 #define AL2       1
 #define AL3       2
-#define NUM       3
-#define SYMB      4
-#define SYMB2     5
-#define MOU1      6
-#define MOU2      7
-#define ASP       8
-#define BT        9
-#define AL2CAPS   10
-#define MKEYS     11
-#define FKEYS     12
-#define LHMOU     13
+#define SYM       3
+#define NUM       4
+#define SYM2      5
+#define TERM      6
+#define MOU1      7
+#define MOU2      8
+#define ASP       9
+#define BT        10
+#define AL2CAPS   11
+#define MKEYS     12
+#define FKEYS     13
+#define LHMOU     14
 
 #define M_MOVE_SPEED 1600
 #define MOVE_UP_H MOVE_VERT(-M_MOVE_SPEED)
@@ -192,37 +193,45 @@
                 
     alpha1 {
 		bindings = <
-		 		            &hl_l SYMB R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYMB I	  
-		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
+		 		            &hl_l SYM2 R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYM2 I	  
+		&hl_l TERM A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r TERM O
 			 	 		 		                    &thu_l MKEYS BKSP   &alpha2macro        &alpha3macro	    &thu_r ASP SPC	 	
 		>;
 		};
 
     alpha2 {
 		bindings = <
-		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
-		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
-			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
+		 	 	      &sl SYM2    &sl NUM	  &sk LSHIFT	      &kp G    	        &kp J			    &kp Y 		
+		&sl SYM   &none       &none		  &sl AL2CAPS       &kp B 		        &kp COMMA			&kp DOT		&kp Z 
+			 	 		 		          &trans	  &to MOU1          &kp LC(LS(LALT))  &trans
 		>;
 		};
 
     alpha3 {
 		bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(EQUAL)		&kp LS(SLASH) 		
-		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)     &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
-			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	  &sk LSHIFT    &sl NUM		&sl SYM2 		
+		&kp Q	 	&kp X 		&kp K		&kp V 		  &sl AL2CAPS   &sl SYM	  &kp SLASH	  &kp LS(SEMICOLON)
+			 	 		 		      &trans	&to NUM     &to LHMOU     &trans
+		>;
+		};
+
+    symb {
+		bindings = <
+		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS 	 	&kp EQUAL             &kp LS(EQUAL)		&kp LS(SLASH) 		
+		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS 	&kp LS(SINGLE_QUOTE)  &kp SEMICOLON	  &kp BACKSLASH		&kp LS(BACKSLASH)
+			 	 		 		                          &trans	          &trans                  &trans     &trans
 		>;
 		};
 		
 		num {
 		bindings = <
-		        &hl_r FKEYS N2 	&kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &hl_r FKEYS N9
-		&kp N1	&kp GRAVE 	    &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
-		                        &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
+		        &kp N2 	     &kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &kp N9
+		&kp N1	&kp GRAVE 	 &kp MINUS		      &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
+		                     &hl_l MKEYS BKSP 	&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
 		>;
 		};
 
-		symb {
+		symb2 {
 		bindings = <
 		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &kp LS(N9)
 		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &kp LS(N0)
@@ -230,7 +239,7 @@
 		>;
 		};
 
-		symb2 {
+		term_hotkeys {
 		bindings = <
 		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none 	 &none		&none
 		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&none	   &none	  &none     &none
