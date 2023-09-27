@@ -259,7 +259,7 @@
 		bindings = <
 				 	  &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	      &kp LS(ENTER) 		&kp LG(RIGHT) 			
 		&none   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &kp LS(LG(LEFT)) 		&none 	          &kp LS(LG(RIGHT)) 	&none
-		 			 		 			        &kt LGUI 		    &key_repeat     &none               &none		
+		 			 		 			        &kp BKSP 		    &key_repeat     &none               &none		
 		>;
 		};
 
