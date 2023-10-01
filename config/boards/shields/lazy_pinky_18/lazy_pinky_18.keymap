@@ -64,8 +64,6 @@
 
 
 / { 
-
-
     behaviors {
         thu_l: thumb_layers_left {
             compatible = "zmk,behavior-hold-tap";
@@ -192,128 +190,105 @@
                     , < &kp CAPS >
                     ;
       };
-
-
+      double_y: behavior_macro_7 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO7";
+        #binding-cells = <0>;
+      	bindings =    < &kp Y >
+                    , < &kp Y >
+                    ;
+      };
     };
 
 // 				0		1		2					3		  4			5
 // 		6		7		8		9 				10		11		12 		13
 //						14	15 	      16 	  17		
-       keymap {
-                compatible = "zmk,keymap";
+    keymap {
+    compatible = "zmk,keymap";
                 
-    alpha1 {
-		bindings = <
+    alpha1 { bindings = <
 		 		            &hl_l SYMB R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYMB I	  
 		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
 			 	 		 		                    &thu_l MKEYS BKSP   &alpha2macro        &alpha3macro	    &thu_r ASP SPC	 	
-		>;
-		};
+		>; };
 
-    alpha2 {
-		bindings = <
+    alpha2 { bindings = <
 		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
 		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
 			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
-		>;
-		};
+		>; };
 
-    alpha3 {
-		bindings = <
+    alpha3 { bindings = <
 		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(EQUAL)		&kp LS(SLASH) 		
 		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)     &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
 			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
-		>;
-		};
+		>; };
 		
-		num {
-		bindings = <
+		num { bindings = <
 		        &hl_r FKEYS N2 	&kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &hl_r FKEYS N9
 		&kp N1	&kp GRAVE 	    &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
 		                        &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
-		>;
-		};
+		>; };
 
-		symb {
-		bindings = <
-		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &kp LS(N9)
-		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &kp LS(N0)
+		symb { bindings = <
+		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &double_y
+		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &none
 		                            &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
-		>;
-		};
+		>; };
 
-		symb2 {
-		bindings = <
+		symb2 { bindings = <
 		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none 	 &none		&none
 		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&none	   &none	  &none     &none
 		                                  &none             &none                       &none 	 &none  	 
-		>;
-		};
+		>; };
 
-		mouse1 {
-		bindings = <
+		mouse1 { bindings = <
 				 	&mkp  MB3		&mkp MB2 	&mkp MB1		&mmv MOVE_LEFT_H 	  &mmv MOVE_UP_H 		&mmv MOVE_RIGHT_H 			
 		&none	&none		    &none 	  &kp LC(UP)	&kp LS(LC(TAB))  	  &mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
 		 			 		 				&trans 		&mo MOU2    &to AL1             &hl_r ASP SPC		
-		>;
+		>; };
 
-    
-		};
-		mouse2 {
-		bindings = <
+		mouse2 { bindings = <
 				 	          &kp LG(A)   &td_find_opn_lst	  &td_new_cls_tab	    &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
 		&kp LG(LS(N4))	&to LHMOU   &none 	            &none		            &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
 		 			 		 				          &none 		          &none               &to AL1              &none	
-		>;
-		};
+		>; };
 
-		alphaspecials {
-		bindings = <
+		alphaspecials { bindings = <
 				 	  &kp LG(Z) 	    &kp LG(GRAVE)   &td_cpy_pst	    &kp LG(LEFT) 	      &kp LS(ENTER) 		&kp LG(RIGHT) 			
 		&none   &kp LS(LC(L))   &kp LG(TAB)  	  &none		        &kp LS(LG(LEFT)) 		&none 	          &kp LS(LG(RIGHT)) 	&none
 		 			 		 			        &kp BKSP 		    &key_repeat     &none               &none		
-		>;
-		};
+		>; };
 
-		bt {
-		bindings = <
+		bt { bindings = <
 				            &bt BT_PRV	  &bt BT_NXT	  &bt BT_CLR 			&bt BT_SEL 0 	  &bt BT_SEL 1	  &none	
 		&bootloader  	  &out OUT_USB 	&out OUT_BLE 	&none 			    &none 	        &none 	        &none	  &bootloader
 		 	 	 				                  &none	        &none           &leave_bt_lay	  &none
-		>;
-		};
+		>; };
 
-    alpha2cap {
-		bindings = <
+    alpha2cap { bindings = <
 		 	 	        &kp LS(W)	  &kp LS(F)	  &kp LS(P) 	&kp LS(G)   &kp LS(J)		  &kp LS(Y)	
 		&kp LS(Q) 	&kp LS(X) 	&kp LS(K)	  &kp LS(V)		&kp LS(B)	  &kp LS(COMMA)	&kp LS(DOT)	&kp LS(Z) 
 			 	                    &none 		  &none 			&none	      &none
-		>;
-		};
+		>; };
         
-		mainkeys {
-		bindings = <
+		mainkeys { bindings = <
 				 	      &kp LCTRL		&kp LGUI 	&kp LSHIFT		&kp LEFT 	      &kp UP 		  &kp RIGHT 			
 		&kp LALT	  &none		    &none 	  &none		      &kp LA(LEFT)    &kp DOWN  	&kp LA(RIGHT) 	&kp ESC 
 		 			 		 				      &none 		&none         &kp ENTER       &kp TAB		
-		>;
-		};
+		>; };
 
-		fkeys {
-		bindings = <
+		fkeys { bindings = <
 				    &kp F2 	&kp F3	  &kp F4 		      &kp F7    &kp F8		&kp F9	
 		&kp F1	&none 	&none		  &kp F5		      &kp F6		&kp F11	  &kp F12   	&kp F10
 							      &none 		&enter_bt_lay 	&to AL1 	&none  	 
-		>;
-		};
+		>; };
 
-		lefthand_mouse_sup {
-		bindings = <
+		lefthand_mouse_sup { bindings = <
 				                &kp LG(TAB) 	&mkp  MB3 	    &kp LSHIFT 		  &caps_and_to_0   &capslock_and_to_0		&none
 		&kp LS(LC(TAB))  	  &kp LC(TAB) 	&td_cpy_pst		  &kp ENTER		    &none		         &none    &none   &none
 							          &to MOU1 		  &none 	        &to AL1 	      &none  	 
-		>;
-		};
+		>; };
 	};
 };
 
