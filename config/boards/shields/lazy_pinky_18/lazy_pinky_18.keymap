@@ -198,6 +198,14 @@
                     , < &kp Y >
                     ;
       };
+      grep_files: behavior_macro_8 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO8";
+        #binding-cells = <0>;
+      	bindings =    < &kp SPC >
+                    , < &kp SLASH >
+                    ;
+      };
     };
 
 // 				0		1		2					3		  4			5
@@ -232,7 +240,7 @@
 
 		symb { bindings = <
 		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &double_y
-		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &none
+		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &grep_files
 		                            &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
 		>; };
 
