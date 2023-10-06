@@ -229,9 +229,9 @@
 		>; };
 
     alpha3 { bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(EQUAL)		&kp LS(SLASH)
-		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)     &kp SEMICOLON	  &kp SLASH		    &kp LS(SEMICOLON)
-			 	 		 		      &trans	&none     &none         &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL         &kp LS(EQUAL)		&kp LS(SLASH)
+		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)         &kp SEMICOLON	  &kp SLASH		    &kp LS(SEMICOLON)
+			 	 		 		      &trans	&none     &kp LC(LS(LALT))  &trans
 		>; };
 		
 		num { bindings = <
