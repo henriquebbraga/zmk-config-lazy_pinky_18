@@ -69,19 +69,37 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_MODS_L";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
+        };
+        thu_l_2: thumb_layers_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MODS_L_2";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <1>;
+            bindings = <&mo>, <&sl>;
         };
         thu_r: thumb_layers_right {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_MODS_R";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
+        };
+        thu_r_2: thumb_layers_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MODS_R_2";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <1>;
+            bindings = <&mo>, <&sl>;
         };
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -217,7 +235,7 @@
     alpha1 { bindings = <
 		 		            &hl_l SYMB R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYMB I	  
 		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
-			 	 		 		                    &thu_l MKEYS BKSP   &alpha2macro        &alpha3macro	    &thu_r ASP SPC	 	
+			 	 		 		                    &thu_l MKEYS BKSP   &thu_l_2 SYMB AL2   &thu_r_2 NUM AL3	    &thu_r ASP SPC	 	
 		>; };
 
     alpha2 { bindings = <
