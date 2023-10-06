@@ -74,7 +74,7 @@
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
         };
-        thu_l_2: thumb_layers_left {
+        thu_l_2: thumb_layers_left_2 {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_MODS_L_2";
             #binding-cells = <2>;
@@ -92,7 +92,7 @@
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
         };
-        thu_r_2: thumb_layers_right {
+        thu_r_2: thumb_layers_right_2 {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_MODS_R_2";
             #binding-cells = <2>;
