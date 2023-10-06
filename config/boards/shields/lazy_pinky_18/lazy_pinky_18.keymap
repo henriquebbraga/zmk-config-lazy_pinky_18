@@ -25,7 +25,6 @@
 #define AL2CAPS   10
 #define MKEYS     11
 #define FKEYS     12
-#define LHMOU     13
 
 #define M_MOVE_SPEED 1600
 #define MOVE_UP_H MOVE_VERT(-M_MOVE_SPEED)
@@ -235,19 +234,19 @@
     alpha1 { bindings = <
 		 		            &hl_l SYMB R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYMB I	  
 		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
-			 	 		 		                    &thu_l MKEYS BKSP   &thu_l_2 SYMB AL2   &thu_r_2 NUM AL3	    &thu_r ASP SPC	 	
+			 	 		 		                    &thu_l MKEYS BKSP   &thu_l_2 MOU1 AL2   &thu_r_2 NUM AL3	    &thu_r ASP SPC	 	
 		>; };
 
     alpha2 { bindings = <
 		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
 		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
-			 	 		 		                          &trans	          &to MOU1                &kp LC(LS(LALT))  &trans
+			 	 		 		                          &trans	          &none                   &kp LC(LS(LALT))  &trans
 		>; };
 
     alpha3 { bindings = <
 		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL     &kp LS(EQUAL)		&kp LS(SLASH) 		
 		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)     &kp SEMICOLON	      &kp SLASH		    &kp LS(SEMICOLON)
-			 	 		 		      &trans	&to NUM   &to LHMOU     &trans
+			 	 		 		      &trans	&none     &none         &trans
 		>; };
 		
 		num { bindings = <
@@ -263,21 +262,21 @@
 		>; };
 
 		symb2 { bindings = <
-		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none 	 &none		&none
-		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&none	   &none	  &none     &none
-		                                  &none             &none                       &none 	 &none  	 
+		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none   &td_find_opn_lst	  &kp LG(A)
+		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&none	  &none	              &none      &none
+		                                  &none             &none                       &none 	&none  	 
 		>; };
 
 		mouse1 { bindings = <
-				 	&mkp  MB3		&mkp MB2 	&mkp MB1		&mmv MOVE_LEFT_H 	  &mmv MOVE_UP_H 		&mmv MOVE_RIGHT_H 			
-		&none	&none		    &none 	  &kp LC(UP)	&kp LS(LC(TAB))  	  &mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
-		 			 		 				&trans 		&mo MOU2    &to AL1             &hl_r ASP SPC		
+				 	    &mkp  MB3		&mkp MB2 	&mkp MB1		&mmv MOVE_LEFT_H 	  &mmv MOVE_UP_H 		&mmv MOVE_RIGHT_H 			
+		&mo MOU2	&none		    &none 	  &kp LC(UP)	&kp LS(LC(TAB))  	  &mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
+		 			 		 				    &trans 		&none       &to AL1             &hl_r ASP SPC		
 		>; };
 
 		mouse2 { bindings = <
-				 	          &kp LG(A)   &td_find_opn_lst	  &td_new_cls_tab	    &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
-		&kp LG(LS(N4))	&to LHMOU   &none 	            &none		            &kp LG(LEFT)  		   &mwh SCROLL_DOWN_H   &kp LG(RIGHT) 	      &mwh SCROLL_UP_FAST
-		 			 		 				          &none 		          &none               &to AL1              &none	
+				 	&none   &none	  &none   &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
+		&none &none   &none 	&none   &none                &mwh SCROLL_DOWN_H   &none                 &mwh SCROLL_UP_FAST
+		 			 		 	  &none 	&none   &none  &kp LG(LS(N4))	
 		>; };
 
 		alphaspecials { bindings = <
@@ -308,12 +307,6 @@
 				    &kp F2 	&kp F3	  &kp F4 		      &kp F7    &kp F8		&kp F9	
 		&kp F1	&none 	&none		  &kp F5		      &kp F6		&kp F11	  &kp F12   	&kp F10
 							      &none 		&enter_bt_lay 	&to AL1 	&none  	 
-		>; };
-
-		lefthand_mouse_sup { bindings = <
-				                &kp LG(TAB) 	&mkp  MB3 	    &kp LSHIFT 		  &caps_and_to_0   &capslock_and_to_0		&none
-		&kp LS(LC(TAB))  	  &kp LC(TAB) 	&td_cpy_pst		  &kp ENTER		    &none		         &none    &none   &none
-							          &to MOU1 		  &none 	        &to AL1 	      &none  	 
 		>; };
 	};
 };
