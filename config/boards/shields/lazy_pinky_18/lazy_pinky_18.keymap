@@ -222,6 +222,7 @@
             key-positions = <14 15>;
             bindings = <&sl AL2CAPS>;
         };
+      };
     };
 
 // 				0		1		2					3		  4			5
