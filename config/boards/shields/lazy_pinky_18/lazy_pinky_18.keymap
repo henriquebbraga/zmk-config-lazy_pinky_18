@@ -22,9 +22,10 @@
 #define MOU2      7
 #define ASP       8
 #define BT        9
-#define AL2CAPS   10
-#define MKEYS     11
-#define FKEYS     12
+#define AL1CAPS   10
+#define AL2CAPS   11
+#define MKEYS     12
+#define FKEYS     13
 
 #define M_MOVE_SPEED 1600
 #define MOVE_UP_H MOVE_VERT(-M_MOVE_SPEED)
@@ -208,6 +209,19 @@
                     , < &kp SLASH >
                     ;
       };
+      combos {
+        compatible = "zmk,combos";
+
+        combo_uppercase {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&sl AL1CAPS>;
+        };
+        combo_al2_uppercase {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&sl AL2CAPS>;
+        };
     };
 
 // 				0		1		2					3		  4			5
@@ -275,11 +289,17 @@
 		&bootloader  	  &out OUT_USB 	&out OUT_BLE 	&none 			    &none 	        &none 	        &none	  &bootloader
 		 	 	 				                  &none	        &none           &leave_bt_lay	  &none
 		>; };
+    >
+    alpha1cap { bindings = <
+		 	 	        &kp LS(R)	  &kp LS(S)	  &kp LS(T) 	&kp LS(N)       &kp LS(E)		  &kp LS(I)	
+		&kp LS(A) 	&kp LS(L) 	&kp LS(C)	  &kp LS(D)		&kp LS(H)	      &kp LS(U)	&kp LS(M)	&kp LS(O) 
+			 	                    &none 		  &none 			&LC(LS(LALT))	  &none
+		>; };
 
     alpha2cap { bindings = <
-		 	 	        &kp LS(W)	  &kp LS(F)	  &kp LS(P) 	&kp LS(G)   &kp LS(J)		  &kp LS(Y)	
-		&kp LS(Q) 	&kp LS(X) 	&kp LS(K)	  &kp LS(V)		&kp LS(B)	  &kp LS(COMMA)	&kp LS(DOT)	&kp LS(Z) 
-			 	                    &none 		  &none 			&none	      &none
+		 	 	        &kp LS(W)	  &kp LS(F)	  &kp LS(P) 	&kp LS(G)       &kp LS(J)		  &kp LS(Y)	
+		&kp LS(Q) 	&kp LS(X) 	&kp LS(K)	  &kp LS(V)		&kp LS(B)	      &kp LS(COMMA)	&kp LS(DOT)	&kp LS(Z) 
+			 	                    &none 		  &none 			&LC(LS(LALT))	  &none
 		>; };
         
 		mainkeys { bindings = <
