@@ -63,6 +63,15 @@
 
 
 / { 
+    combos {
+      compatible = "zmk,combos";
+      combo_esc {
+          timeout-ms = <50>;
+          key-positions = <16 17>;
+          bindings = <&sl AL2CAPS>;
+      };
+    };
+
     behaviors {
         thu_l: thumb_layers_left {
             compatible = "zmk,behavior-hold-tap";
