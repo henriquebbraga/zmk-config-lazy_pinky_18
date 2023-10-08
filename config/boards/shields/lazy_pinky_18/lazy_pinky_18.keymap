@@ -247,7 +247,7 @@
 		>; };
 
 		symb2 { bindings = <
-		        &kp LS(LC(TAB)) 	        &td_new_cls_tab	  &kp LC(TAB) 	              &none         &td_find_opn_lst	  &kp LG(A)
+		        &kp LC(A) 	              &td_new_cls_tab	  &kp LC(LS(T)) 	            &none         &td_find_opn_lst	  &kp LG(A)
 		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&caps_word	  &kp CAPS	          &none      &none
 		                                  &none             &none                       &none 	&none  	 
 		>; };
@@ -260,7 +260,7 @@
 
 		mouse2 { bindings = <
 				 	&none   &none	  &none   &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
-		&none &none   &none 	&none   &kp LS(LEFT)         &mwh SCROLL_DOWN_H   &kp LS(RIGHT)         &mwh SCROLL_UP_FAST
+		&none &none   &none 	&none   &kp LC(LEFT)         &mwh SCROLL_DOWN_H   &kp LC(RIGHT)         &mwh SCROLL_UP_FAST
 		 			 		 	  &none 	&none   &none  &kp LG(LS(N4))	
 		>; };
 
