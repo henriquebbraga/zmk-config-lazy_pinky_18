@@ -224,8 +224,8 @@
 		>; };
 
 		symb2 { bindings = <
-		        &kp LC(A) 	              &td_new_cls_tab	  &kp LC(LS(T)) 	            &none         &td_find_opn_lst	  &kp LG(A)
-		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&caps_word	  &kp CAPS	          &none      &none
+		        &kp LG(A) 	              &td_new_cls_tab	  &kp LG(LS(T)) 	            &none         &kp LG(F)	  &kp LG(A)
+		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&caps_word	  &kp CAPS	  &none      &none
 		                                  &none             &none                       &none 	&none  	 
 		>; };
 
