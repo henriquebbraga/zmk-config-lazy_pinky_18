@@ -108,7 +108,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <3 4 5 10 11 12 13 16 17>;
+            require-prior-idle-ms = <100>;
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -118,7 +118,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15>;
+            require-prior-idle-ms = <100>;
         };
         hl_l: homerow_layers_left {
             compatible = "zmk,behavior-hold-tap";
@@ -128,7 +128,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <3 4 5 10 11 12 13 16 17>;
+            require-prior-idle-ms = <100>;
         };
         hl_r: homerow_layers_right {
             compatible = "zmk,behavior-hold-tap";
@@ -138,7 +138,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15>;
+            require-prior-idle-ms = <100>;
         };
 
         td_cpy_pst: tapdance_1 {
