@@ -47,7 +47,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
-            require-prior-idle-ms = <150>;
         };
         thu_l_2: thumb_layers_left_2 {
             compatible = "zmk,behavior-hold-tap";
@@ -67,7 +66,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <1>;
             bindings = <&mo>, <&kp>;
-            require-prior-idle-ms = <150>;
         };
         thu_r_2: thumb_layers_right_2 {
             compatible = "zmk,behavior-hold-tap";
