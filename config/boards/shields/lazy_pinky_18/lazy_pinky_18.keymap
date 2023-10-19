@@ -237,7 +237,7 @@
 
 		mouse2 { bindings = <
 				 	&none   &none	  &none   &mwh SCROLL_LEFT_H   &mwh SCROLL_UP_H 		&mwh SCROLL_RIGHT_H
-		&none &none   &none 	&none   &kp LC(LEFT)         &mwh SCROLL_DOWN_H   &kp LC(RIGHT)         &mwh SCROLL_UP_FAST
+		&none &none   &none 	&none   &kp LG(LEFT)         &mwh SCROLL_DOWN_H   &kp LG(RIGHT)         &mwh SCROLL_UP_FAST
 		 			 		 	  &none 	&none   &none  &kp LG(LS(N4))	
 		>; };
 
