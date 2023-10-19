@@ -28,6 +28,8 @@
 #define MKEYS     11
 #define FKEYS     12
 
+#define MEGA LC(LG(LA(LSHIFT)))
+
 &mt {
     tapping-term-ms = <201>;
     flavor = "tap-preferred";
@@ -200,15 +202,15 @@
 		>; };
 
     alpha2 { bindings = <
-		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	        &kp J			    &kp Y 		
-		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		        &kp COMMA			&kp DOT		&kp Z 
-			 	 		 		                          &trans	          &none                   &kp LC(LS(LALT))  &trans
+		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	&kp J			    &kp Y 		
+		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		&kp COMMA			&kp DOT		&kp Z 
+			 	 		 		                          &trans	          &none                   &kp MEGA  &trans
 		>; };
 
     alpha3 { bindings = <
-		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL         &kp LS(EQUAL)		&kp LS(SLASH)
-		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)         &kp SEMICOLON	  &kp SLASH		    &kp LS(SEMICOLON)
-			 	 		 		      &trans	&none     &kp LC(LS(LALT))  &trans
+		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL   &kp LS(EQUAL)		&kp LS(SLASH)
+		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)   &kp SEMICOLON	  &kp SLASH		    &kp LS(SEMICOLON)
+			 	 		 		      &trans	&none     &kp MEGA    &trans
 		>; };
 		
 		num { bindings = <
