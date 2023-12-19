@@ -27,6 +27,7 @@
 #define AL2CAPS   10
 #define MKEYS     11
 #define FKEYS     12
+#define NVIM      13
 
 #define MEGA LC(LG(LA(LSHIFT)))
 
@@ -187,6 +188,35 @@
                     , < &kp SLASH >
                     ;
       };
+      open_down: behavior_macro_9 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO9";
+        #binding-cells = <0>;
+      	bindings =    < &kp O >
+                    , < &kp DOWN >
+                    ;
+      };
+      lazy_git: behavior_macro_10 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO10";
+        #binding-cells = <0>;
+      	bindings =    < &kp SPC >
+                    , < &kp G >
+                    , < &kp G >
+                    ;
+      };
+      norm_cmd: behavior_macro_11 {
+        compatible = "zmk,behavior-macro";
+        label = "MACRO11";
+        #binding-cells = <0>;
+      	bindings =    < &kp LS(SEMICOLON)>
+                    , < &kp N >
+                    , < &kp O >
+                    , < &kp R >
+                    , < &kp M >
+                    , < &kp SPC >
+                    ;
+      };
     };
 
 // 				0		1		2					3		  4			5
@@ -196,45 +226,45 @@
     compatible = "zmk,keymap";
                 
     alpha1 { bindings = <
-		 		            &hl_l SYMB R 	  &hl_l NUM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NUM E     &hl_r SYMB I	  
+		 		            &hl_l SYMB R 	  &hl_l NVIM S 	      &hm_l LSHIFT T		  &hm_r RSHIFT N 	  &hl_r NVIM E     &hl_r SYMB I	  
 		&hl_l SYMB2 A	  &hm_l LCTRL L	  &hm_l LGUI C	      &hl_l AL2CAPS D 	 	&hl_r AL2CAPS H   &hm_r RGUI U    &hm_r RCTRL M  &hl_r SYMB2 O
 			 	 		 		                    &thu_l MKEYS BKSP   &thu_l_2 MOU1 AL2   &thu_r_2 NUM AL3	    &thu_r ASP SPC	 	
 		>; };
 
     alpha2 { bindings = <
-		 	 	                &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	&kp J			    &kp Y 		
-		&kp SINGLE_QUOTE	 	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		&kp COMMA			&kp DOT		&kp Z 
-			 	 		 		                          &trans	          &none                   &kp MEGA  &trans
+		 	 	              &kp LEFT_BRACKET 	&kp LEFT_BRACE	  &kp LEFT_PARENTHESIS	  &kp G    	&kp J			    &kp Y 		
+		&kp SINGLE_QUOTE	&kp RIGHT_BRACKET &kp RIGHT_BRACE		&kp RIGHT_PARENTHESIS   &kp B 		&kp COMMA			&kp DOT		&kp Z 
+			 	 		 		                        &none	            &none                   &kp MEGA  &none
 		>; };
 
     alpha3 { bindings = <
 		 	 	    &kp W 		&kp F		&kp P	 	 	&kp EQUAL   &kp LS(EQUAL)		&kp LS(SLASH)
 		&kp Q	 	&kp X 		&kp K		&kp V 		&kp LC(A)   &kp SEMICOLON	  &kp SLASH		    &kp LS(SEMICOLON)
-			 	 		 		      &trans	&none     &kp MEGA    &trans
+			 	 		 		      &none	  &none     &kp MEGA    &none
 		>; };
 		
 		num { bindings = <
 		        &hl_r FKEYS N2 	&kp N3	            &kp N4 		  &kp N7 	  &kp N8		      &hl_r FKEYS N9
 		&kp N1	&kp GRAVE 	    &kp MINUS		        &kp N5		  &kp N6	  &kp COMMA	      &kp DOT   	    &kp N0
-		                        &hl_l MKEYS BKSP 		&to FKEYS   &to AL1 	&hl_r ASP SPC  	 
+		                        &hl_l MKEYS BKSP 		&none       &none 	  &none  	 
 		>; };
 
 		symb { bindings = <
-		            &kp LS(N2) 	    &kp LS(N3)	        &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &double_y
-		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		    &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &grep_files
-		                            &hl_l MKEYS BKSP 		&none         &to AL1 	    &hl_r ASP SPC  	 
+		            &kp LS(N2) 	    &kp LS(N3)	      &kp LS(N4) 		&kp LS(N7) 	  &kp LS(N8)		  &double_y
+		&kp LS(N1)	&kp LS(GRAVE) 	&kp LS(MINUS)		  &kp LS(N5)		&kp LS(N6)	  &kp BACKSLASH	  &kp LS(BACKSLASH)   	  &grep_files
+		                            &none 		        &none         &none 	      &none  	 
 		>; };
 
 		symb2 { bindings = <
-		        &kp LG(A) 	              &td_new_cls_tab	  &kp LG(LS(T)) 	            &none         &kp LG(F)	  &kp LG(A)
-		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&caps_word	  &kp CAPS	  &none      &none
-		                                  &none             &none                       &none 	&none  	 
+		        &kp LG(A) 	              &td_new_cls_tab	  &kp LG(LS(T)) 	            &none         &kp LG(F)	    &kp LG(A)
+		&none	  &kp LS(LC(LEFT_BRACKET)) 	&kp LG(ENTER)		  &kp LS(LC(RIGHT_BRACKET))		&caps_word	  &kp CAPS	    &none      &none
+		                                  &none             &none                       &none 	      &none
 		>; };
 
 		mouse1 { bindings = <
-				 	    &mkp  MB3		&mkp MB2  &mkp MB1		&mmv MOVE_LEFT_H 	  &mmv MOVE_UP_H 		&mmv MOVE_RIGHT_H 			
-		&mo MOU2	&kp LSHIFT	&none     &kp LC(UP)	&kp LS(LC(TAB))  	  &mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
-		 			 		 				    &trans    &none       &none             &hl_r ASP SPC		
+				 	  &mkp  MB3		&mkp MB2  &mkp MB1		&mmv MOVE_LEFT_H 	&mmv MOVE_UP_H 		&mmv MOVE_RIGHT_H 			
+		&none	  &kp LSHIFT	&mo MOU2  &kp LC(UP)	&kp LS(LC(TAB))  	&mmv MOVE_DOWN_H 	&kp LC(TAB) 	     &none 
+		 			 		 				  &none     &none       &kp LC(LEFT)      &kp LC(RIGHT)
 		>; };
 
 		mouse2 { bindings = <
@@ -270,7 +300,13 @@
 		fkeys { bindings = <
 				    &kp F2 	&kp F3	  &kp F4 		      &kp F7    &kp F8		&kp F9	
 		&kp F1	&none 	&none		  &kp F5		      &kp F6		&kp F11	  &kp F12   	&kp F10
-							      &none 		&enter_bt_lay 	&to AL1 	&none  	 
+							      &none 		&enter_bt_lay 	&none 	  &none  	 
+		>; };
+
+		nvim_stuff { bindings = <
+				    &none 	&none	   &none 	     &none         &norm_cmd		    &none	
+		&none	  &none 	&none		 &none		   &open_down	   &lazy_git	  &none   &none
+							      &none 	 &none 	     &none         &none  	 
 		>; };
 	};
 };
