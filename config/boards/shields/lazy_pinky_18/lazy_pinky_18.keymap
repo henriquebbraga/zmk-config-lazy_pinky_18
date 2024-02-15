@@ -292,21 +292,21 @@
 		>; };
         
 		mainkeys { bindings = <
-				 	      &kp LCTRL		&kp LGUI 	&kp LSHIFT		&kp LEFT 	      &kp UP 		  &kp RIGHT 			
-		&kp LALT	  &none		    &none 	  &none		      &kp LA(LEFT)    &kp DOWN  	&kp LA(RIGHT) 	&kp ESC 
-		 			 		 				      &none 		&none         &kp ENTER       &kp TAB		
+				 	      &kp LCTRL		&kp LGUI 	&kp LSHIFT		    &kp LEFT 	      &kp UP 		  &kp RIGHT 			
+		&kp LALT	  &none		    &none 	  &none		          &kp LA(LEFT)    &kp DOWN  	&kp LA(RIGHT) 	&kp ESC 
+		 			 		 				      &none 		&none             &kp ENTER       &kp TAB		
 		>; };
 
 		fkeys { bindings = <
-				    &kp F2 	&kp F3	  &kp F4 		      &kp F7    &kp F8		&kp F9	
-		&kp F1	&none 	&none		  &kp F5		      &kp F6		&kp F11	  &kp F12   	&kp F10
-							      &none 		&enter_bt_lay 	&none 	  &none  	 
+				    &kp F2 	&kp F3	  &kp F4 		                &kp F7    &kp F8		&kp F9	
+		&kp F1	&none 	&none		  &kp F5		                &kp F6		&kp F11	  &kp F12   	&kp F10
+							      &none 		&enter_bt_lay 	          &none 	  &none  	 
 		>; };
 
-		nvim_stuff { bindings = <
-				    &none 	&none	   &none 	     &none         &norm_cmd		    &none	
-		&none	  &none 	&none		 &none		   &open_down	   &lazy_git	  &none   &none
-							      &none 	 &none 	     &none         &none  	 
+		nvim_stuff { bindings = <    
+				    &none 	&none	   &none 	                    &kp LC(Z)     &kp LC(Q)		&none
+		&none	  &none 	&none		 &none		                  &open_down	  &lazy_git	  &norm_cmd   &none
+							      &none 	 &none 	                    &none         &none  	 
 		>; };
 	};
 };
