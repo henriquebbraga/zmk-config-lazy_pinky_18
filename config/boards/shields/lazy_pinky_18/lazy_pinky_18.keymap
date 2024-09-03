@@ -210,7 +210,7 @@
         label = "MACRO11";
         #binding-cells = <0>;
         bindings =    < &kp ESC >
-                    , < &kp A >
+                    , < &kp LS(A) >
                     , < &kp SEMICOLON >
                     , < &kp ESC >
                     ;
