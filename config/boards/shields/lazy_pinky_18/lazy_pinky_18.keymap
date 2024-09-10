@@ -260,9 +260,9 @@
     >; };
 
     mouse1 { bindings = <
-             &mkp  MB3    &mkp MB2  &mkp MB1    &mmv MOVE_LEFT_H   &mmv MOVE_UP_H     &mmv MOVE_RIGHT_H
-    &none    &kp LSHIFT   &mo MOU2  &kp LC(UP)  &kp LS(LC(TAB))    &mmv MOVE_DOWN_H   &kp LC(TAB)        &none
-                          &none     &none       &kp LC(LEFT)       &kp LC(RIGHT)
+                  &mkp  MB3    &mkp MB2  &mkp MB1    &mmv MOVE_LEFT_H   &mmv MOVE_UP_H     &mmv MOVE_RIGHT_H
+    &td_cpy_pst   &kp LSHIFT   &mo MOU2  &kp LC(UP)  &kp LS(LC(TAB))    &mmv MOVE_DOWN_H   &kp LC(TAB)        &none
+                               &none     &none       &kp LC(LEFT)       &kp LC(RIGHT)
     >; };
 
     mouse2 { bindings = <
